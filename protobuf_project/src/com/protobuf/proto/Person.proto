@@ -1,0 +1,15 @@
+package com.proto;
+
+option java_package="com.mode";
+option java_outer_classname="PersonProto";
+
+message Person{
+	required string name = 1;
+	required int32 id = 2;
+	optional string email = 3;
+	message Phone{
+		required string phoneNum = 1;
+		optional int32 phoneType = 2;
+	}
+	repeated Phone phone = 4;
+}
